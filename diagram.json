@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "author": "Mohd Kamarul Zaman",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 65.34,
+      "left": -38,
+      "attrs": { "env": "micropython-20220618-v1.19.1" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -49.43,
+      "left": -191.17,
+      "attrs": { "distance": "3" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": -109.2, "left": 23, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -33.6,
+      "left": 85.85,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -64.8,
+      "left": 174.6,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 63.8,
+      "left": -393.6,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 167.15,
+      "left": -230.4,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -89.6,
+      "left": -532,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -202.9, "left": -134.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "ultrasonic1:TRIG", "esp:D5", "green", [ "v4", "h211.85", "v109.85" ] ],
+    [ "ultrasonic1:ECHO", "esp:D18", "green", [ "v13.83", "h188.38", "v84.47" ] ],
+    [ "esp:VIN", "ultrasonic1:VCC", "red", [ "h-91.8", "v-12.64" ] ],
+    [ "led1:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "esp:D2", "green", [ "h0", "v210" ] ],
+    [ "led1:C", "esp:GND.1", "green", [ "v105.6", "h86.8", "v172.8" ] ],
+    [ "esp:D4", "bz1:2", "green", [ "h0" ] ],
+    [ "bz1:1", "esp:GND.1", "green", [ "v0" ] ],
+    [ "lcd1:GND", "esp:GND.2", "black", [ "h-28.8", "v240" ] ],
+    [ "lcd1:VCC", "esp:VIN", "red", [ "h-19.2", "v278.5", "h514.2" ] ],
+    [ "lcd1:SDA", "esp:D21", "green", [ "h-19.2", "v432.2", "h691.2", "v-259.2" ] ],
+    [ "lcd1:SCL", "esp:D22", "green", [ "h-9.6", "v470.7", "h710.4", "v-345.6" ] ],
+    [ "btn1:2.r", "esp:3V3", "green", [ "h0.2", "v211.4", "h422.4", "v-83.36" ] ],
+    [ "r2:2", "esp:GND.2", "green", [ "v0" ] ],
+    [ "r2:1", "btn1:1.r", "green", [ "v0" ] ],
+    [ "btn1:1.r", "esp:D35", "green", [ "v-9.6", "h269", "v134.4" ] ],
+    [ "pot1:SIG", "esp:D34", "green", [ "v48", "h-96.4", "v182.4" ] ],
+    [ "pot1:VCC", "esp:3V3", "red", [ "v9.6", "h200.8", "v345.6" ] ],
+    [ "pot1:GND", "esp:GND.2", "black", [ "v48", "h-105.6", "v288" ] ]
+  ],
+  "dependencies": {}
+}
