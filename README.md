@@ -1,5 +1,15 @@
 ## Overview
-**Robot Chain** is a compact robotic demonstration showing a chain-driven locomotion/actuation system and coordinated control between embedded firmware and a host computer. The project demonstrates mechanical design, motor control (PWM/encoder feedback), basic path-following, and a visual demo recorded in the linked video.
+This project implements an ultrasonic security alarm system using a microcontroller, an HC-SR04 ultrasonic sensor, and a 16x2 I2C LCD display. The system continuously measures the distance to an object, and when a movement or intrusion is detected within a predefined safety range, the alarm is triggered.
+
+The LCD screen provides real-time feedback, such as:
+
+The measured distance
+
+Alarm status (SAFE / ALERT)
+
+System initialization messages
+
+This project is designed as a simple and effective introduction to embedded systems, combining sensing, display output, and basic alert logic. It can be used for learning, prototyping home-security devices, or integrating into more advanced robotics projects.
 
 ---
 
