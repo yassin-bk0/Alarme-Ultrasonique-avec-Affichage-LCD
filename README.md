@@ -14,4 +14,4 @@ This project is designed as a simple and effective introduction to embedded syst
 ---
 
 ## Demo Video
-> Watch the demo: **[Click here to view the demo video](./alarm-demo.mp4)**
+> Watch the demo: **[Click here to view the demo video](./sensor.mp4)**
