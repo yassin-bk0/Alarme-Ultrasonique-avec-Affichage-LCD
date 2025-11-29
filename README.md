@@ -15,5 +15,6 @@ This project is designed as a simple and effective introduction to embedded syst
 
 ## Demo Video
 > Watch the demo:
-> [![Watch the video]](https://raw.githubusercontent.com/yassin-bk0/Alarme-Ultrasonique-avec-Affichage-LCD/main/sensor.mp4)
+[Click here to view the demo video](https://www.youtube.com/watch?v=YeuCMh)
+
 
