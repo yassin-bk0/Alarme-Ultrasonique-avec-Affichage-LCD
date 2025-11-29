@@ -14,5 +14,4 @@ This project is designed as a simple and effective introduction to embedded syst
 ---
 
 ## Demo Video
-> Watch the demo: **(Insert Facebook video link or another hosted link here)**  
-`https://www.facebook.com/watch?v=1302046424902929` *(paste direct video URL or local copy)*
+> Watch the demo: **[Click here to view the demo video](./alarm-demo.mp4)**
